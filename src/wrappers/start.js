@@ -2,14 +2,12 @@
   'use strict';
   var isElectron = typeof module === 'object' && process && process.versions && process.versions.electron;
   if (!isElectron && typeof module === 'object') {
-    module.exports = factory;
+    var MediumEditor = require('medium-editor');
+    module.exports = factory(MediumEditor);
   } else if (typeof define === 'function' && define.amd) {
-    define(function() {
-        return factory;
-    });
+    define(['medium-editor'], factory);
   } else {
-    root.MediumEditorTable = factory;
+    root.MediumEditorTable = factory(root.MediumEditor);
   }
-}(this, function () {
-
+}(this, function (MediumEditor) {
   'use strict';

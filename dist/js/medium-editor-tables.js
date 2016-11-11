@@ -2,16 +2,14 @@
   'use strict';
   var isElectron = typeof module === 'object' && process && process.versions && process.versions.electron;
   if (!isElectron && typeof module === 'object') {
-    module.exports = factory;
+    var MediumEditor = require('medium-editor');
+    module.exports = factory(MediumEditor);
   } else if (typeof define === 'function' && define.amd) {
-    define(function() {
-        return factory;
-    });
+    define(['medium-editor'], factory);
   } else {
-    root.MediumEditorTable = factory;
+    root.MediumEditorTable = factory(root.MediumEditor);
   }
-}(this, function () {
-
+}(this, function (MediumEditor) {
   'use strict';
 
 function extend(dest, source) {
@@ -444,7 +442,7 @@ Table.prototype = {
             '<tbody id="medium-editor-table-tbody">' +
             html +
             '</tbody>' +
-            '</table>', {
+            '</table><p><br></p>', {
                 cleanAttrs: [],
                 cleanTags: []
             }
@@ -452,7 +450,7 @@ Table.prototype = {
 
         var table = this._doc.getElementById('medium-editor-table'),
             tbody = this._doc.getElementById('medium-editor-table-tbody');
-        if (0 === $(table).find('#medium-editor-table-tbody').length) {
+        if (('undefined' !== typeof $) && (0 === $(table).find('#medium-editor-table-tbody').length)) {
             //Edge case, where tbody gets appended outside table tag
             $(tbody).detach().appendTo(table);
         }
@@ -606,4 +604,4 @@ MediumEditorTable = MediumEditor.extensions.form.extend({
 });
 
   return MediumEditorTable;
-}()));
+}));

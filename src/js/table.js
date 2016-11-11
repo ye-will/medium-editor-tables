@@ -20,7 +20,7 @@ Table.prototype = {
             '<tbody id="medium-editor-table-tbody">' +
             html +
             '</tbody>' +
-            '</table>', {
+            '</table><p><br></p>', {
                 cleanAttrs: [],
                 cleanTags: []
             }
@@ -28,7 +28,7 @@ Table.prototype = {
 
         var table = this._doc.getElementById('medium-editor-table'),
             tbody = this._doc.getElementById('medium-editor-table-tbody');
-        if (0 === $(table).find('#medium-editor-table-tbody').length) {
+        if (('undefined' !== typeof $) && (0 === $(table).find('#medium-editor-table-tbody').length)) {
             //Edge case, where tbody gets appended outside table tag
             $(tbody).detach().appendTo(table);
         }
