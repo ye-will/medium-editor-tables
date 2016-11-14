@@ -42,7 +42,7 @@ Table.prototype = {
     _html: function (rows, cols) {
         var html = '',
             x, y,
-            text = getSelectionText(this._doc);
+            text = getSelectionText(this._doc) || '<br />';
 
         for (x = 0; x <= rows; x++) {
             html += '<tr>';

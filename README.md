@@ -1,6 +1,6 @@
 ﻿# MediumEditor Tables
 
-[![NPM info](https://nodei.co/npm/medium-editor-tables.png?downloads=true)](https://nodei.co/npm/medium-editor-tables.png?downloads=true)
+[![NPM info](https://nodei.co/npm/medium-editor-tablite.png?downloads=true)](https://nodei.co/npm/medium-editor-tables.png?downloads=true)
 
 [![Travis build status](https://travis-ci.org/yabwe/medium-editor-tables.png?branch=master)](https://travis-ci.org/yabwe/medium-editor-tables)
 [![dependencies](https://david-dm.org/yabwe/medium-editor-tables.png)](https://david-dm.org/yabwe/medium-editor-tables)

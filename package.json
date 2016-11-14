@@ -1,6 +1,6 @@
 {
   "name": "medium-editor-tablite",
-  "version": "0.6.1-1",
+  "version": "0.6.1-2",
   "author": "Will Ye <yeah_well@live.com>",
   "description": "MediumEditor extension to allow tables. forked from yabwe/medium-editor-tables",
   "main": "dist/js/medium-editor-tables.js",
