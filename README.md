@@ -22,13 +22,13 @@ Demo: [http://yabwe.github.io/medium-editor-tables/](http://yabwe.github.io/medi
 You can install manually or either by using npm or bower:
 
 ```
-npm install medium-editor-tables
+npm install medium-editor-tablite
 ```
 
 or
 
 ```
-bower install medium-editor-tables
+bower install medium-editor-tablite
 ```
 
 On your app, link the style and the script and initialize MediumEditor with the table extension:
