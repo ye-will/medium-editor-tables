@@ -40,14 +40,14 @@ On your app, link the style and the script and initialize MediumEditor with the 
 ...
   <link rel="stylesheet" href="<path_to_medium-editor>/dist/css/medium-editor.css" />
   <link rel="stylesheet" href="<path_to_medium-editor>/dist/css/themes/default.css" />
-  <link rel="stylesheet" href="<path_to_medium-editor-tables>/dist/css/medium-editor-tables.css" />
+  <link rel="stylesheet" href="<path_to_medium-editor-tablite>/dist/css/medium-editor-tablite.css" />
 ...
 </head>
 <body>
   <div class="editable"></div>
 
   <script type="text/javascript" src="<path_to_medium-editor>/dist/js/medium-editor.js"></script>
-  <script type="text/javascript" src="<path_to_medium-editor-tables>/dist/js/medium-editor-tables.js"></script>
+  <script type="text/javascript" src="<path_to_medium-editor-tablite>/dist/js/medium-editor-tablite.js"></script>
 
   <script type="text/javascript" charset="utf-8">
   var editor = new MediumEditor('.editable', {
